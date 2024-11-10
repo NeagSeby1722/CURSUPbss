@@ -1,0 +1,284 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/background.jpg'); /* Update with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.3);
+    z-index: -1;
+    animation: zoomBackground 20s infinite alternate;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    flex: 1;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1e90ff;
+}
+
+/* Right-side Elements */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.search-form input::placeholder {
+    color: #ccc;
+}
+
+.search-form input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-form button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #1e90ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #63b8ff;
+}
+
+.search-form button i {
+    font-size: 1rem;
+}
+
+.login-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 8px 15px;
+    border: 1px solid #1e90ff;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-link:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    padding-top: 120px; /* Adjust for fixed navbar */
+    padding-bottom: 60px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.viewer {
+    margin-bottom: 40px;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.download-link {
+    margin-bottom: 60px;
+}
+
+.download-link h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #ff416c;
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px 0 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Animations */
+@keyframes zoomBackground {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar .container {
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .pdf-viewer {
+        height: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .pdf-viewer {
+        height: 300px;
+    }
+}

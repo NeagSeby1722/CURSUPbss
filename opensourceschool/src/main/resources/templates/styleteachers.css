@@ -1,0 +1,125 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; 
+    color: #fff; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #111;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+.teachers-section {
+    padding: 60px 0;
+    background-color: #000; 
+}
+
+.teacher-card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.teacher-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.teacher-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.teacher-card .department {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.teacher-card .bio {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+footer {
+    padding: 20px 0;
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (min-width: 768px) {
+    .teachers-section .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .teacher-card {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (min-width: 992px) {
+    .teacher-card {
+        flex: 1 1 calc(25% - 30px);
+        max-width: calc(25% - 30px);
+    }
+}

@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000; /* Set background to black */
+  color: #fff; /* Set text color to white */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #111;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Universities Section */
+.uni-section {
+  padding: 60px 0;
+  background-color: #000;
+}
+
+.uni-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.uni-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.uni-card img.uni-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.uni-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.uni-card .date {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.uni-card .bio {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.uni-card-link {
+  color: inherit;
+}
+
+.uni-card-link:hover .uni-card {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+  padding: 20px 0;
+  background-color: #111;
+  text-align: center;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .uni-section .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+  }
+
+  .uni-card {
+      flex: 1 1 calc(50% - 30px);
+      max-width: calc(50% - 30px);
+  }
+}
+
+@media (min-width: 992px) {
+  .uni-card {
+      flex: 1 1 calc(33.33% - 30px);
+      max-width: calc(33.33% - 30px);
+  }
+}

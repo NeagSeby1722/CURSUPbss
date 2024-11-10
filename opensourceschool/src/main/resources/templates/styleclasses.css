@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000; 
+  color: #fff; 
+}
+
+a {
+  text-decoration: none;
+  color: #1e90ff; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #111;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#courses {
+  padding: 60px 0;
+  background-color: #000;
+}
+
+.class-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: #fff;
+  animation: fadeInUp 1s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.class-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.class-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.class-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.class-card ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.class-card ul li a {
+  color: #1e90ff;
+  font-weight: 400;
+}
+
+.class-card ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: #111;
+  text-align: center;
+  color: #fff;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  #courses .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .class-card {
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+  }
+}
